@@ -1,0 +1,19 @@
+{
+  "name": "startit-movie-finder",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Demonstration project for students. Feburary 16",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "pretest": "npm run tsc",
+    "test": "protractor",
+    "tsc": "tsc",
+    "tscw": "tsc -w"
+  },
+  "dependencies": {
+    "@types/node": "^7.0.18",
+    "@types/jasmine": "^2.5.47",
+    "typescript": "^2.3.2",
+    "protractor": "^5.1.1"
+  }
+}
