@@ -20,5 +20,4 @@ Finished in 0.009 seconds
 ```
 
 
-Files compiled automatically before `npm test`. 
-Or you can trigger compilation directly by running `npm run tsc`.
+.ts files compiled to .js files automatically
