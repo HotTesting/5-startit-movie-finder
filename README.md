@@ -1,4 +1,4 @@
-# startit_movie_finder
+# startit movie finder
 Working project for startit students
 
 
