@@ -17,6 +17,7 @@ describe('Search ', async function () {
 
         let foundMovieTitles = $$('movies > div > div.row.is-flex movie-card a[title]');
         let titles: any = await foundMovieTitles.getAttribute('title')
+        expect(titles.length).toBe(20, 'Number of found movies must be 20')
         titles.forEach(title => expect(title).toContain(SEARCH_REQUEST))
     })
 
