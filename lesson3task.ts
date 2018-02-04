@@ -6,7 +6,7 @@ describe('Search ', async function () {
 
     })
 
-    it('results(all of them) should contain serach request'), async function () {
+    it('results(all of them) should contain serach request', async function () {
         await browser.get('/', 1000);
 
         const SEARCH_REQUEST = 'Dreams';
@@ -17,13 +17,10 @@ describe('Search ', async function () {
 
         let foundMovieTitles = $$('movies > div > div.row.is-flex movie-card a[title]');
         let titles: any = await foundMovieTitles.getAttribute('title')
-        await Promise.all(titles.map(async title => {
-            console.log('testing', title)
-            await expect(title).toContain(SEARCH_REQUEST)
-        }))
-    }
+        titles.forEach(title => expect(title).toContain(SEARCH_REQUEST))
+    })
 
-    it('result should be empty, after request for nonexistent movie'), async function () {
+    it('result should be empty, after request for nonexistent movie', async function () {
 
-    }
+    })
 })
