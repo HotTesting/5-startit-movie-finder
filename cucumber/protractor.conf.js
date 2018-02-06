@@ -14,8 +14,8 @@ module.exports.config = {
     }
 };
 
-
-/**dependencies:
+/**
+dependencies:
     "@types/cucumber": "^0.0.38",
     "@types/node": "^7.0.8",
     "@types/selenium-webdriver": "~2.53.39",

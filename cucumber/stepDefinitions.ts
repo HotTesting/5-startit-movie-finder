@@ -1,25 +1,23 @@
-import { browser, element, by } from 'protractor';
+import { browser, element, by, $$ } from 'protractor';
 import { Then, When, Given } from 'cucumber'
-let chai = require('chai').use(require('chai-as-promised'));
-let expect = chai.expect;
+import { expect } from 'chai';
 
 
-let first_operand = element(by.model('first'))
-let second_operand = element(by.model('second'))
-let go_button = element(by.id('gobutton'))
-let result = element(by.binding('latest'))
-
-Given(/^I am on ng1 calculator page$/, async () => {
-    await expect(await browser.getTitle()).to.equal('Super Calculator')
+Given("I am on home page", async function () {
+    await browser.get('/')
 });
 
-When(/^I calculate "(.*?)" "(.*?)" "(.*?)"$/, async (num1: string, optor: string, num2: string) => {
-    await first_operand.sendKeys(num1)
-    await element(by.cssContainingText('option', optor)).click()
-    await second_operand.sendKeys(num2)
-    await go_button.click();
+When("I see movie cards loaded", async function () {
+    await expect(await $$('movie-card').count()).not.to.equal(0)
 });
 
-Then(/^the result "(.*?)" should be displayed$/, async (expected: string) => {
-    await expect(await result.getText()).to.equal(expected);
+Then("Movie Card should have name", async function () {
+    await expect(await $$('movie-card').first().$('.text-ellipsis a').getAttribute('title'))
+        .to.contain('Dilwale Dulhania Le Jayenge')
+});
+
+Then("Movie Card should have raiting pointer", async function () {
+    let movieRating = $$('movie-card').get(0).$('small')
+    await expect(await movieRating.isDisplayed())
+        .to.be.true
 });
