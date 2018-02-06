@@ -11,7 +11,6 @@ describe('Search ', async function () {
 
         const SEARCH_REQUEST = 'Dreams';
         let searchField = $('input[name="searchStr"]');
-
         await searchField.sendKeys(SEARCH_REQUEST, Key.ENTER);
         await browser.sleep(5000)
 

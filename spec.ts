@@ -52,7 +52,7 @@ describe('Browser', function () {
         await browser2.get('/')
         await browser2.sleep(5000)
 
-        await browser.close()
+        //await browser.close()
         // Dirrect search in specified browser
         await browser2.$('div')
     })
