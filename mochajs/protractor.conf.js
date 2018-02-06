@@ -8,6 +8,7 @@ module.exports.config = {
 
     framework: 'mocha',
     mochaOpts: {
-        timeout: 60000
+        timeout: 60000,
+        //reporter: 'nyan'
     }
 }

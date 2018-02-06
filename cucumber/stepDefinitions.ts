@@ -1,13 +1,15 @@
 import { browser, element, by, $$ } from 'protractor';
-import { Then, When, Given } from 'cucumber'
+import { Then, When, Given, Step } from 'cucumber'
 import { expect } from 'chai';
 
 
-Given("I am on home page", async function () {
+Then("I am on home page", async function () {
     await browser.get('/')
+    this.someVariable = 'Some data'
 });
 
-When("I see movie cards loaded", async function () {
+Then("I see movie cards loaded", async function () {
+    console.log(this.someVariable)
     await expect(await $$('movie-card').count()).not.to.equal(0)
 });
 
