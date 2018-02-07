@@ -167,7 +167,12 @@ describe('ElementFinder', function () {
 
 describe('Expect', function () {
     it('should assert something', async function () {
-        expect(await $('asdf').getText()).toContain('WORLD')
+        try {
+            expect(await $('div').getText()).toContain('WORLD')
+        } catch (err) {
+            console.log(err)
+        }
+
         expect('HELLO WORLD').toContain('TAMAGOCHI')
     })
 })
