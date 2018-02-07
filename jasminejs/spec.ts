@@ -5,7 +5,7 @@ describe('Protractor searching', function () {
         await browser.get('/')
         let a = element.all(By.css('movie-card')).first()
         let b = $('movie-card') // the same as element(By.css('movie-card'))
-        let c = $$('').last()
+        let c = $$('div').last()
 
         console.log(await a.getText())
         console.log(await b.getText())
@@ -167,12 +167,7 @@ describe('ElementFinder', function () {
 
 describe('Expect', function () {
     it('should assert something', async function () {
-        try {
-            expect(await $('div').getText()).toContain('WORLD')
-        } catch (err) {
-            console.log(err)
-        }
-
-        expect('HELLO WORLD').toContain('TAMAGOCHI')
+        expect(['abc', 'def']).toContain('def')
+        expect('HELLO WORLD').toContain('WORLD')
     })
 })
