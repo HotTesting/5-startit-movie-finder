@@ -6,6 +6,7 @@ module.exports.config = {
   baseUrl: 'https://movies-finder.firebaseapp.com/',
   SELENIUM_PROMISE_MANAGER: false,
 
+  capabilities: { browserName: 'chrome', enableVNC: true },
   onPrepare: function () {
     // Adding nice console output. 
     // Provided by: https://github.com/razvanz/jasmine2-reporter
