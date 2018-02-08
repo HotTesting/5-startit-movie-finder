@@ -13,10 +13,6 @@ describe('Movie details', async function () {
         throw new Error('Test not implemented yet')
     })
 
-    it('should have simular movies block with atleast one movie', async function () {
-        throw new Error('Test not implemented yet')
-    })
-
     describe('cast block', async function () {
         it('should show atleast one actor', async function () {
             throw new Error('Test not implemented yet')

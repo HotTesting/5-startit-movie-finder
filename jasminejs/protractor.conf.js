@@ -7,7 +7,14 @@ module.exports.config = {
   SELENIUM_PROMISE_MANAGER: false,
 
   capabilities: { browserName: 'chrome', enableVNC: true },
-  onPrepare: function () {
+  onPrepare: async function () {
+    // Global implicit wait setup
+    await browser.manage().timeouts().implicitlyWait(1000)
+
+    afterEach(async function () {
+      await browser.manage().timeouts().implicitlyWait(1000)
+    })
+
     // Adding nice console output. 
     // Provided by: https://github.com/razvanz/jasmine2-reporter
     let ConsoleReporter = require('jasmine2-reporter').Jasmine2Reporter
