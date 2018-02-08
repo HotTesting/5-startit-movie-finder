@@ -6,7 +6,11 @@ module.exports.config = {
   baseUrl: 'https://movies-finder.firebaseapp.com/',
   SELENIUM_PROMISE_MANAGER: false,
 
-  capabilities: { browserName: 'chrome', enableVNC: true },
+  capabilities: {
+    browserName: 'chrome',
+    enableVNC: true,
+    name: "Oleksandr Khotemskyi"
+  },
   onPrepare: async function () {
     // Global implicit wait setup
     await browser.manage().timeouts().implicitlyWait(1000)

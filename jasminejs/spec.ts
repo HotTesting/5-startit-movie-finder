@@ -43,19 +43,29 @@ describe('Browser', function () {
         console.timeEnd('sleep')
     })
 
-    it('can fork new driver instance', async function () {
-        await browser.waitForAngularEnabled(false) // Before navigating to non-angular page
-        await browser.get('http://the-internet.herokuapp.com/') // second optional param - page load timeout
+    describe('can fork', async function () {
+        let browser2 = null
 
-        let browser2 = await browser.forkNewDriverInstance().ready;
+        it(' new driver instance', async function () {
+            await browser.waitForAngularEnabled(false) // Before navigating to non-angular page
+            await browser.get('http://the-internet.herokuapp.com/') // second optional param - page load timeout
 
-        await browser2.get('/')
-        await browser2.sleep(5000)
+            browser2 = await browser.forkNewDriverInstance().ready;
+            await browser2.get('/')
+            await browser2.sleep(5000)
+            // Direct search for element in specified browser
+            console.log('Element displayed in second browser!', await browser2.$('div').isDisplayed())
+        })
 
-        //await browser.close()
-        // Dirrect search in specified browser
-        await browser2.$('div')
+        afterAll(async function () {
+            // Cleaning up to not have zombie browser in other tests
+            if (browser2) {
+                browser.quit()
+            }
+        })
+
     })
+
 
     it('can switch to iframe', async function () {
         await browser.waitForAngularEnabled(false) // Before navigating to non-angular page
@@ -270,7 +280,9 @@ describe('Waits', function () {
             return EC.visibilityOf($('#finish h4'))()
         },
             20000,
-            'result should appear in 20 seconds, but it doesnt')
+            'result should appear in 20 seconds, but it doesnt').then(null, err => {
+                console.log(JSON.stringify(err))
+            })
     })
 })
 
