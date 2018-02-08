@@ -60,7 +60,7 @@ describe('Browser', function () {
         afterAll(async function () {
             // Cleaning up to not have zombie browser in other tests
             if (browser2) {
-                browser.quit()
+                browser2.quit()
             }
         })
 
