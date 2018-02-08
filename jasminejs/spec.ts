@@ -171,7 +171,7 @@ describe('Expect', function () {
 
 
 
-fdescribe('Waits', function () {
+describe('Waits', function () {
 
 
     it('implicit wait should wait for element to be present', async function () {
