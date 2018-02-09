@@ -20,5 +20,4 @@ Finished in 0.009 seconds
 [22:55:11] I/launcher - chrome #01 passed
 ```
 
-
 .ts files compiled to .js files automatically
