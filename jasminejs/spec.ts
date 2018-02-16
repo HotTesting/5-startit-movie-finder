@@ -312,7 +312,7 @@ describe('Lazy Elements', function () {
 })
 
 
-fdescribe('Model Pattern', function () {
+describe('Model Pattern', function () {
     interface IMovie {
         title: string,
         rating: number,
@@ -346,23 +346,103 @@ fdescribe('Model Pattern', function () {
     }
 
 
-    fit('can be created for data from page', async function () {
+    it('can be created for data from page', async function () {
         await browser.get('https://movies-finder.firebaseapp.com/movie/19404')
-        
+
         await browser.sleep(1500)
 
         let movieModel = new Movie()
 
-        let rating = await($('app-movie h2 .label').getText())
+        let rating = await ($('app-movie h2 .label').getText())
         movieModel.setRating(parseFloat(rating))
-        
+
         let casts = await $$('app-movie div .col-md-3 .thumbnail').asElementFinders_()
         await Promise.all(casts.map(async function (elem) {
             let imgLink = await elem.$('img').getAttribute('src')
             let name = await elem.$('a').getText()
-            await movieModel.pushToCast({img: imgLink, name: name})
+            await movieModel.pushToCast({ img: imgLink, name: name })
         }))
-        
+
         console.log('Model is', JSON.stringify(movieModel))
     })
+})
+
+describe('ASYNC code', function () {
+
+    it('can work with callbacks', function () {
+        let fs = require('fs')
+        console.time('fileread')
+        fs.readFile('./package.json',
+            'utf8',
+            (err, data) => {
+                if (err) throw err;
+                console.log(data);
+                fs.readFile('./.travis.yml',
+                    'utf8',
+                    (err, data) => {
+                        if (err) throw err;
+                        console.log(data);
+                    });
+            });
+        console.timeEnd('fileread')
+    })
+
+    it('promises example', function () {
+        let fs = require('fs')
+        console.time('fileread')
+        let a = new Promise(function (resolve, reject) {
+            fs.readFile('./package.json',
+                'utf8',
+                (err, data) => {
+                    if (err) { reject(err) }
+                    resolve(data)
+                })
+        });
+        console.log(a)
+        a.then(console.log, console.log)
+            .then(() => console.timeEnd('fileread'))
+    })
+
+    it('promises can be used for protractor synchronization', function () {
+        let a = element.all(By.css('movie-card')).first()
+        let b = $('movie-card') // the same as element(By.css('movie-card'))
+        let c = $$('div').last()
+
+        return browser.get('/').then(() => {
+            return a.getText().then((text) => {
+                console.log('1', text)
+            })
+        }).then(() => {
+            return c.getText().then((text) => {
+                console.log('3', text)
+            })
+        }).then(() => {
+            return b.getText().then((text) => {
+                console.log('2', text)
+            })
+        })
+    })
+
+    it('async/await error handling', async function () {
+        try {
+            await $('div').getText()
+        } catch (error) {
+            console.log('Got error:', error)
+            // throw error
+        } finally {
+            console.log('finally block executed in any case')
+        }
+    })
+
+    fit('iterating with async actions', async function () {
+        await browser.get('/')
+
+        let elements = await $$('div').asElementFinders_()
+
+        for (let elem of elements) {
+            console.log(await elem.getText())
+        }
+
+    })
+
 })
