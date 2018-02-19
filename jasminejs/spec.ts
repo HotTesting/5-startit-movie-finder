@@ -434,7 +434,7 @@ describe('ASYNC code', function () {
         }
     })
 
-    fit('iterating with async actions', async function () {
+    it('iterating with async actions', async function () {
         await browser.get('/')
 
         let elements = await $$('div').asElementFinders_()
