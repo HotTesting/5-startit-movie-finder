@@ -1,7 +1,12 @@
 require('ts-node').register();
 
+// import * as log4js from 'log4js'
+let log4js = require('log4js')
+log4js.setGlobalLogLevel(process.env.LOG_LEVEL || 'ERROR')
+const logger = log4js.getLogger('ConfigLogger')
+
 module.exports.config = {
-  specs: ['spec.ts'],
+  specs: ['specs/**/*.ts'],
 
   baseUrl: 'https://movies-finder.firebaseapp.com/',
   SELENIUM_PROMISE_MANAGER: false,
@@ -12,6 +17,7 @@ module.exports.config = {
     name: "Oleksandr Khotemskyi"
   },
   onPrepare: async function () {
+    logger.info('On prepare started')
     // Global implicit wait setup
     await browser.manage().timeouts().implicitlyWait(1000)
 

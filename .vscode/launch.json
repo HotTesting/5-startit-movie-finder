@@ -13,6 +13,9 @@
                 "./jasminejs/protractor.conf.js",
                 "--directConnect=true"
             ],
+            "env": {
+                "LOG_LEVEL": "ALL"
+            },
             "protocol": "inspector",
             "sourceMaps": true,
             "console": "internalConsole",

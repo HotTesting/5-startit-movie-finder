@@ -1,7 +1,7 @@
 import { browser, element, By, by, until, $, $$, Key, ExpectedConditions as EC } from 'protractor'
-import { HomePage } from './pages/home'
+import { HomePage } from '../pages/home'
 
-fdescribe('Search ', async function () {
+describe('Search ', async function () {
     const homePage = new HomePage()
 
     beforeEach(async function () {
@@ -12,7 +12,7 @@ fdescribe('Search ', async function () {
         
     })
 
-    fit('results(all of them) should contain search request', async function () {
+    it('results(all of them) should contain search request', async function () {
         const SEARCH_REQUEST = 'Dreams';
         await homePage.searchFor(SEARCH_REQUEST)
         let titles = await homePage.getFoundMoviesTitles()
