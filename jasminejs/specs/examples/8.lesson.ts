@@ -21,18 +21,18 @@ describe('ActionSequence', function () {
 
         await browser.sleep(3000)
 
-        let a: any = $('#column-a header') //.getLocation()
+        let a: any = $('#column-a') //.getLocation()
         //.then((location) => { return { x: location.x + 50, y: location.y + 50 } })
 
-        let b: any = $('#column-b header')// .getLocation()
+        let b: any = $('#column-b')// .getLocation()
         // .then((location) => { return { x: location.x + 50, y: location.y + 50 } })
 
         let dragAndDrop = function (elemnt1, elemnt2) {
             return browser.actions()
-            .mouseMove(a, { x: 5, y: 5 })
-            .mouseDown()
-            .mouseMove(b, { x: 5, y: 5 })
-            .mouseUp()
+                .mouseMove(a, { x: 5, y: 5 })
+                .mouseDown()
+                .mouseMove(b, { x: 5, y: 5 })
+                .mouseUp()
         }
         await dragAndDrop(a, b).perform()
         await browser.sleep(20000)

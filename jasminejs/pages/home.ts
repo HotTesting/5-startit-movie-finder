@@ -18,8 +18,7 @@ export class HomePage {
     }
 
     async getFoundMoviesTitles() {
-        return (await this.getFoundMovies())
-            .$$('a[title]')
-            .getAttribute('title')
+        let foundMovies = await this.getFoundMovies()
+        return foundMovies.$$('a[title]').getAttribute('title')
     }
 }

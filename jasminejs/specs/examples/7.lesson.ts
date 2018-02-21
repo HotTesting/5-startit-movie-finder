@@ -69,12 +69,12 @@ describe('ASYNC code', function () {
     it('iterating with async actions', async function () {
         await browser.get('/')
 
-        let elements = await $$('div').asElementFinders_()
+        let elements = await $$('movie-card').asElementFinders_()
 
         for (let elem of elements) {
             console.log(await elem.getText())
         }
 
-    })
+    }, 60000)
 
 })

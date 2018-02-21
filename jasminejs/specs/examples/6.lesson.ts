@@ -4,7 +4,7 @@ describe('Lazy Elements', function () {
     let goneMessage = element(By.cssContainingText('p#message', `It's gone!`))
     let button = $('button#btn')
 
-    it('should not be searched if no manipulations', async function () {
+    xit('should not be searched if no manipulations', async function () {
         await browser.waitForAngularEnabled(false) // Before navigating to non-angular page
         await browser.get('http://the-internet.herokuapp.com/dynamic_controls') // second optional param - page load timeout
 
@@ -62,7 +62,7 @@ describe('Model Pattern', function () {
     }
 
 
-    it('can be created for data from page', async function () {
+    xit('can be created for data from page', async function () {
         await browser.get('https://movies-finder.firebaseapp.com/movie/19404')
 
         await browser.sleep(1500)

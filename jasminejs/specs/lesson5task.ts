@@ -1,6 +1,6 @@
 import { browser, $, $$, element, by, By } from 'protractor'
 
-describe('Movie details', async function () {
+xdescribe('Movie details', async function () {
     it('should have movie name as header', async function () {
         throw new Error('Test not implemented yet')
     })
@@ -30,7 +30,7 @@ describe('Movie details', async function () {
     })
 })
 
-describe('Popular series', async function () {
+xdescribe('Popular series', async function () {
     it('shouldnt have search bar', async function () {
         throw new Error('Test not implemented yet')
     })
