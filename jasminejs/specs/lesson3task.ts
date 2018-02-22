@@ -1,7 +1,7 @@
 import { browser, element, By, by, until, $, $$, Key, ExpectedConditions as EC } from 'protractor'
 import { HomePage } from '../pages/home'
 
-describe('Search ', async function () {
+fdescribe('Search ', async function () {
     const homePage = new HomePage()
 
     beforeEach(async function () {
@@ -21,9 +21,9 @@ describe('Search ', async function () {
     })
 
     it('result should be empty, after request for nonexistent movie', async function () {
-        const SEARCH_REQUEST = 'NON-EXIST!'
+        const SEARCH_REQUEST = 'NON-EXIST!12312893123'
         await homePage.searchFor(SEARCH_REQUEST)
-        let movies = await homePage.getFoundMovies()
-        expect(await movies.count()).toBe(0, 'Number of found movies must be 0')
+        let movies = await homePage.getFoundMovies().catch(err=> [])
+        expect(movies.length).toBe(0, 'Number of found movies must be 0')
     })
 })
