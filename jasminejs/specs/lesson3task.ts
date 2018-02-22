@@ -1,7 +1,7 @@
 import { browser, element, By, by, until, $, $$, Key, ExpectedConditions as EC } from 'protractor'
 import { HomePage } from '../pages/home'
 
-fdescribe('Search ', async function () {
+describe('Search ', async function () {
     const homePage = new HomePage()
 
     beforeEach(async function () {

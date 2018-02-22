@@ -68,6 +68,11 @@ describe('Model Pattern', function () {
         await browser.sleep(1500)
 
         let movieModel = new Movie()
+        movieModel.setTitle((await browser.executeScript(`
+            return $("app-movie > div:nth-child(1) > div.col-md-8 > h2").text().trim()
+                .replace($("app-movie > div:nth-child(1) > div.col-md-8 > h2 > small")
+                .text().trim(), '')
+        `) as string))
 
         let rating = await ($('app-movie h2 .label').getText())
         movieModel.setRating(parseFloat(rating))
