@@ -9,7 +9,8 @@
     "test-travis": "protractor ./jasminejs/protractor.conf.js --seleniumAddress=\"http://ip-5236.sunline.net.ua:4444/wd/hub\"",
     "test-localselenium": "protractor ./jasminejs/protractor.conf.js --seleniumAddress=\"http://localhost:4444/wd/hub\"",
     "test-cucumber": "protractor ./cucumber/protractor.conf.js",
-    "test-mocha": "protractor ./mochajs/protractor.conf.js"
+    "test-mocha": "protractor ./mochajs/protractor.conf.js",
+    "test-reporters": "protractor ./jasminejs/specs/examples/10_lesson/protractor.conf.js --directConnect=true"
   },
   "dependencies": {
     "@types/node": "^9.3.0",
@@ -21,6 +22,10 @@
     "ts-node": "^4.1.0",
     "protractor": "^5.2.2",
     "jasmine2-reporter": "^0.2.0",
+    "jasmine-reporters": "^2.3.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "allure-commandline": "^2.5.0",
+    "agent-js-jasmine": "^3.0.0",
     "@types/cucumber": "^4.0.0",
     "@types/selenium-webdriver": "~2.53.39",
     "chai": "^3.5.0",

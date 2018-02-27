@@ -17,6 +17,15 @@ export class HomePage {
         return this.foundMovies
     }
 
+    // How to return another pageobject 
+    // async goToDetails(indx:number) {
+    //     let movies = await this.getFoundMovies()
+    //     await movies[indx].click()
+    //     await browser.wait
+
+    //     return new DetailsPage()
+    // }
+    // 
     async getFoundMoviesTitles() {
         /** 
          * Notice, this.getFoundMovies() resolves to array of ElementFinders, not ElementArrayFinder object.
@@ -32,3 +41,5 @@ export class HomePage {
 
     }
 }
+
+// let detailsPage = new HomePage().goToDetails(0)

@@ -1,0 +1,51 @@
+{
+  "uid" : "f249ea55c6151788",
+  "name" : "should report failed test",
+  "fullName" : "Reporting.should report failed test",
+  "historyId" : "fa8554b96a447f7b5c0062a139c16a38",
+  "time" : {
+    "start" : 1519755280424,
+    "stop" : 1519755280427,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Failed: Test failed error",
+  "statusTrace" : "Error: Test failed error\n                    at UserContext.<anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:11:15)\n                    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:112:25\n                    at new Promise (<anonymous>)\n                    at SimpleScheduler.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2242:12)\n                    at schedulerExecute (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:95:18)\n                    at promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2232:22)\n                    at new Promise (<anonymous>)\n                    at SimpleScheduler.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2242:12)\n                    at SimpleScheduler.execute (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2227:17)\n                    at UserContext.<anonymous> (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:94:19)\n                From asynchronous test: \n                Error\n                    at Suite.<anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:9:5)\n                    at addSpecsToSuite (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1152:25)\n                    at Env.fdescribe (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1140:7)\n                    at fdescribe (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4584:18)\n                    at Object.<anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:5:1)\n                    at Module._compile (module.js:660:30)\n                    at Module.m._compile (/Users/olekh/github/5-startit-movie-finder/node_modules/ts-node/src/index.ts:422:23)\n                    at Module._extensions..js (module.js:671:10)\n                    at Object.require.extensions.(anonymous function) [as .ts] (/Users/olekh/github/5-startit-movie-finder/node_modules/ts-node/src/index.ts:425:12)",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Reporting"
+  }, {
+    "name" : "testClass",
+    "value" : "Reporting"
+  }, {
+    "name" : "testMethod",
+    "value" : "should report failed test"
+  }, {
+    "name" : "package",
+    "value" : "Reporting"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f249ea55c6151788.json",
+  "parameterValues" : [ ]
+}

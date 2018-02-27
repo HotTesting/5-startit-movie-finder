@@ -1,0 +1,31 @@
+[ {
+  "uid" : "aaf27e3c9ce2326f",
+  "name" : "should report skipped test",
+  "time" : {
+    "start" : 1519755280427,
+    "stop" : 1519755280428,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "474d4f9a9a1bb71a",
+  "name" : "should report passed test",
+  "time" : {
+    "start" : 1519755280419,
+    "stop" : 1519755280423,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f249ea55c6151788",
+  "name" : "should report failed test",
+  "time" : {
+    "start" : 1519755280424,
+    "stop" : 1519755280427,
+    "duration" : 3
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

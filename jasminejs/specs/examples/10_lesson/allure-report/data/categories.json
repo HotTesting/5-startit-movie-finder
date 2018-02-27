@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Failed: Test failed error",
+      "children" : [ {
+        "name" : "should report failed test",
+        "uid" : "f249ea55c6151788",
+        "parentUid" : "b6627e5bba307ec94d403765476ce166",
+        "status" : "failed",
+        "time" : {
+          "start" : 1519755280424,
+          "stop" : 1519755280427,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b6627e5bba307ec94d403765476ce166"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

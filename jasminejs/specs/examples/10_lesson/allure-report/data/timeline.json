@@ -1,0 +1,41 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "should report skipped test",
+    "uid" : "aaf27e3c9ce2326f",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1519755280427,
+      "stop" : 1519755280428,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should report passed test",
+    "uid" : "474d4f9a9a1bb71a",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1519755280419,
+      "stop" : 1519755280423,
+      "duration" : 4
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should report failed test",
+    "uid" : "f249ea55c6151788",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1519755280424,
+      "stop" : 1519755280427,
+      "duration" : 3
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

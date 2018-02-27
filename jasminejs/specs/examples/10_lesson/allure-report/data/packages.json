@@ -1,0 +1,45 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Reporting",
+    "children" : [ {
+      "name" : "should report passed test",
+      "uid" : "474d4f9a9a1bb71a",
+      "parentUid" : "c6c46da23d3cc6f5ad5ccbf3079be89f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1519755280419,
+        "stop" : 1519755280423,
+        "duration" : 4
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should report failed test",
+      "uid" : "f249ea55c6151788",
+      "parentUid" : "c6c46da23d3cc6f5ad5ccbf3079be89f",
+      "status" : "failed",
+      "time" : {
+        "start" : 1519755280424,
+        "stop" : 1519755280427,
+        "duration" : 3
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should report skipped test",
+      "uid" : "aaf27e3c9ce2326f",
+      "parentUid" : "c6c46da23d3cc6f5ad5ccbf3079be89f",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1519755280427,
+        "stop" : 1519755280428,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c6c46da23d3cc6f5ad5ccbf3079be89f"
+  } ]
+}

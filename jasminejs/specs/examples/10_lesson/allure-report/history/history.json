@@ -1,0 +1,61 @@
+{
+  "2187678edb52488968be926d2625d56" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aaf27e3c9ce2326f",
+      "status" : "skipped",
+      "statusDetails" : "This is skip reason",
+      "time" : {
+        "start" : 1519755280427,
+        "stop" : 1519755280428,
+        "duration" : 1
+      }
+    } ]
+  },
+  "84917f54fe2745413d60edcb0b547b11" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "474d4f9a9a1bb71a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1519755280419,
+        "stop" : 1519755280423,
+        "duration" : 4
+      }
+    } ]
+  },
+  "fa8554b96a447f7b5c0062a139c16a38" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f249ea55c6151788",
+      "status" : "failed",
+      "statusDetails" : "Failed: Test failed error",
+      "time" : {
+        "start" : 1519755280424,
+        "stop" : 1519755280427,
+        "duration" : 3
+      }
+    } ]
+  }
+}

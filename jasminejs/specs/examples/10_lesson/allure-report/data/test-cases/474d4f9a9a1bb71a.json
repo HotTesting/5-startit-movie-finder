@@ -1,0 +1,45 @@
+{
+  "uid" : "474d4f9a9a1bb71a",
+  "name" : "should report passed test",
+  "fullName" : "Reporting.should report passed test",
+  "historyId" : "84917f54fe2745413d60edcb0b547b11",
+  "time" : {
+    "start" : 1519755280419,
+    "stop" : 1519755280423,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Reporting"
+  }, {
+    "name" : "testClass",
+    "value" : "Reporting"
+  }, {
+    "name" : "testMethod",
+    "value" : "should report passed test"
+  }, {
+    "name" : "package",
+    "value" : "Reporting"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "474d4f9a9a1bb71a.json",
+  "parameterValues" : [ ]
+}

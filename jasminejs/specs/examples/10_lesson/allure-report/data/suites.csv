@@ -1,0 +1,4 @@
+"Status","Name","Duration in ms","Description"
+"skipped","Reporting.should report skipped test","1",""
+"passed","Reporting.should report passed test","4",""
+"failed","Reporting.should report failed test","3",""

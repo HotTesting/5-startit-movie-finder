@@ -1,0 +1,47 @@
+{
+  "uid" : "aaf27e3c9ce2326f",
+  "name" : "should report skipped test",
+  "fullName" : "Reporting.should report skipped test",
+  "historyId" : "2187678edb52488968be926d2625d56",
+  "time" : {
+    "start" : 1519755280427,
+    "stop" : 1519755280428,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This is skip reason",
+  "statusTrace" : "",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Reporting"
+  }, {
+    "name" : "testClass",
+    "value" : "Reporting"
+  }, {
+    "name" : "testMethod",
+    "value" : "should report skipped test"
+  }, {
+    "name" : "package",
+    "value" : "Reporting"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aaf27e3c9ce2326f.json",
+  "parameterValues" : [ ]
+}
