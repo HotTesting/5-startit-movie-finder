@@ -2,8 +2,8 @@ import { browser, element, By, $, $$, Key, ExpectedConditions as EC } from 'prot
 import * as log4js from 'log4js'
 const logger = log4js.getLogger('SpecLogger')
 
-fdescribe('execute script', function () {
-    it('can return something ', async function () {
+describe('execute script', function () {
+    xit('can return something ', async function () {
         await browser.get('/movie/19404')
         await browser.sleep(2000)
 
@@ -17,7 +17,7 @@ fdescribe('execute script', function () {
 
     })
 
-    it('can return something ', async function () {
+    xit('can be async, and work with provided callback ', async function () {
         await browser.get('/movie/19404')
         await browser.sleep(2000)
 
@@ -30,7 +30,7 @@ fdescribe('execute script', function () {
 
     })
 
-    it('can return something ', async function () {
+    xit('can search for elements', async function () {
         await browser.get('/movie/19404')
         await browser.sleep(2000)
 
@@ -56,7 +56,7 @@ fdescribe('execute script', function () {
 
     })
 
-    it('can send some HTTP requests from page', async function () {
+    xit('can send some HTTP requests from page', async function () {
         await browser.get('/movie/19404')
         await browser.sleep(2000)
 
@@ -83,7 +83,7 @@ fdescribe('execute script', function () {
         console.log('Got text by js:', text)
     })
 
-    it('can accept arguments ', async function () {
+    xit('can accept arguments ', async function () {
         await browser.get('/movie/19404')
         await browser.sleep(2000)
 
