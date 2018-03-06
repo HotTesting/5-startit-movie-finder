@@ -7,7 +7,7 @@ const logger = log4js.getLogger('ConfigLogger')
 
 module.exports.config = {
   specs: ['specs/**/*.ts'],
-
+  exclude: ['specs/examples/10_lesson/10.lesson.ts'],
   baseUrl: 'https://movies-finder.firebaseapp.com/',
   SELENIUM_PROMISE_MANAGER: false,
 

@@ -1,0 +1,13 @@
+version: '2'
+services:
+  selenium-chrome-standalone:
+    ports:
+     - "44444:4444"
+    image: "selenium/standalone-chrome"
+
+  e2e-tests:
+    build: .
+    links:
+     - selenium-chrome-standalone
+    depends_on:
+     - selenium-chrome-standalone

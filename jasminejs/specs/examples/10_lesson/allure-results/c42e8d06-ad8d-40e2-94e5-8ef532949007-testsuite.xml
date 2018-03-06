@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1520249024609' stop='1520249024621'>
+    <name>Reporting</name>
+    <title>Reporting</title>
+    <test-cases>
+        <test-case start='1520249024611' status='passed' stop='1520249024614'>
+            <name>should report passed test</name>
+            <title>should report passed test</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1520249024615' status='failed' stop='1520249024619'>
+            <name>should report failed test</name>
+            <title>should report failed test</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Failed: Test failed error</message>
+                <stack-trace>Error: Test failed error
+                    at UserContext.&lt;anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:22:19)
+                    at Generator.next (&lt;anonymous>)
+                    at /Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:7:71
+                    at new Promise (&lt;anonymous>)
+                    at __awaiter (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:3:12)
+                    at UserContext.&lt;anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:20:16)
+                    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:112:25
+                    at new Promise (&lt;anonymous>)
+                    at SimpleScheduler.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2242:12)
+                    at schedulerExecute (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:95:18)
+                From asynchronous test: 
+                Error
+                    at Suite.&lt;anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:19:5)
+                    at addSpecsToSuite (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1152:25)
+                    at Env.fdescribe (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1140:7)
+                    at fdescribe (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4584:18)
+                    at Object.&lt;anonymous> (/Users/olekh/github/5-startit-movie-finder/jasminejs/specs/examples/10_lesson/10.lesson.ts:13:1)
+                    at Module._compile (module.js:660:30)
+                    at Module.m._compile (/Users/olekh/github/5-startit-movie-finder/node_modules/ts-node/src/index.ts:422:23)
+                    at Module._extensions..js (module.js:671:10)
+                    at Object.require.extensions.(anonymous function) [as .ts] (/Users/olekh/github/5-startit-movie-finder/node_modules/ts-node/src/index.ts:425:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1520249024619' status='pending' stop='1520249024620'>
+            <name>should report skipped test</name>
+            <title>should report skipped test</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This is skip reason</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

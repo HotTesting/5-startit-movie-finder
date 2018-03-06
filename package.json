@@ -7,6 +7,8 @@
     "postinstall": "webdriver-manager update --gecko=false --standalone=false",
     "test": "protractor ./jasminejs/protractor.conf.js --directConnect=true",
     "test-travis": "protractor ./jasminejs/protractor.conf.js --seleniumAddress=\"http://ip-5236.sunline.net.ua:4444/wd/hub\"",
+    "test-container-chrome": "protractor ./jasminejs/protractor.conf.js --seleniumAddress=\"http://selenium-chrome-standalone:4444/wd/hub\"",
+    "debug": "node --inspect=\"127.0.0.1:5858\" ./node_modules/.bin/protractor ./jasminejs/protractor.conf.js --seleniumAddress=\"http://ip-5236.sunline.net.ua:4444/wd/hub\"",
     "test-localselenium": "protractor ./jasminejs/protractor.conf.js --seleniumAddress=\"http://localhost:4444/wd/hub\"",
     "test-cucumber": "protractor ./cucumber/protractor.conf.js",
     "test-mocha": "protractor ./mochajs/protractor.conf.js",

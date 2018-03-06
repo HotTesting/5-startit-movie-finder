@@ -12,10 +12,10 @@ const ReportportalAgent = require('agent-js-jasmine');
   project: default_personal
 */
 const agent = new ReportportalAgent({
-  token: "5da75e8d-5e23-4761-9edb-e44a329d90bf",
-  endpoint: "http://localhost:8080/api/v1",
-  launch: "default_TEST_EXAMPLE",
-  project: "default_personal",
+  token: "d275cc6e-6e8f-4fb2-bc51-05af49342621",
+  endpoint: "http://35.204.111.110:8080/api/v1",
+  launch: "default",
+  project: "5-startit-movie-finder",
   attachPicturesToLogs: false
 });
 

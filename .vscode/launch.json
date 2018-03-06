@@ -20,6 +20,17 @@
             "sourceMaps": true,
             "console": "internalConsole",
             "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            // does not vork "preLaunchTask": "debug",
+            "protocol": "inspector",
+            "name": "Debug Remote Docker",
+            //"address": "localhost",
+            "port": 5858,
+            "localRoot": "${workspaceRoot}/",
+            "remoteRoot": "/e2e"
         }
     ]
 }
