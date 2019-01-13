@@ -10,7 +10,7 @@ module.exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     cucumberOpts: {
-        format: ['./cucumber/allure_reporter.js'],
+        format: ['./cucumber/allure_reporter.ts'],
         require: ['./stepDefinitions.ts'],
     }
 };
